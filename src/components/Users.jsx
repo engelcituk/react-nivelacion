@@ -1,17 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useFetchUsers } from "../hooks/useFetchUsers"
 import "./Users.css"
 
 const Users = () => {
-  const [ users, setUsers ] = useState([])
-
-  const getUsers = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users")
-    const data = await response.json()
-    setUsers(data)
-  }
-   useEffect(() => {
-    getUsers()
-   }, [])
+  const {users} = useFetchUsers()
    
   return <>
   <h3>Users</h3>
