@@ -1,13 +1,17 @@
-import { Fragment, useState } from "react"
+import {  useState } from "react"
 
 const Counter = ()=> {
 
     const [counter, setCounter] = useState(5)
 
+    const handleClick = () => {
+        console.log('handleClick')
+    }
     return(
-        <Fragment>
-            Counter: {counter}
-        </Fragment>
+        <>
+            <h1>Counter: {counter}</h1>
+            <button onClick={ handleClick }>Add</button>
+        </>
     )
 }
 
