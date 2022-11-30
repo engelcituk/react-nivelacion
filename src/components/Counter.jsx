@@ -1,10 +1,14 @@
-import { useState } from "react"
+import { Fragment, useState } from "react"
 
 const Counter = ()=> {
 
     const [counter, setCounter] = useState(5)
 
-    return <h1>Counter: {counter}</h1>
+    return(
+        <Fragment>
+            Counter: {counter}
+        </Fragment>
+    )
 }
 
 export default Counter
